@@ -4,8 +4,15 @@ import pandas as pd
 # --- Configuração da página ---
 st.set_page_config(page_title="Planejamento de Intenção de Compra", page_icon="🧾")
 
-st.title("📦 Planejamento de Intenção de Compra")
-st.markdown("Preencha as intenções de compra de tratores por mês e gere o relatório.")
+# --- Cabeçalho corporativo ---
+col1, col2 = st.columns([1, 4])
+with col1:
+    st.image("logo.png", width=100)
+with col2:
+    st.title("Planejamento de Intenção de Compra")
+
+st.markdown("Aplicativo desenvolvido pela **LA Data** para coleta e consolidação de intenções de compra de tratores.")
+st.divider()
 
 # --- Entrada do dealer ---
 dealer = st.text_input("Digite o nome ou ID do dealer:")
